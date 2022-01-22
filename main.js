@@ -4,20 +4,27 @@ function calc(operator, a, b) {
     }
 
     let result;
-    if (operator === '+') {
-        result = a + b;
-    } else if (operator === '-') {
-        result = a - b;
-    } else if (operator === '*') {
-        result = a * b;
-    } else if (operator === '/') {
-        result = a / b;
-    } else if (operator === '%') {
-        result = a % b;
-    } else if (operator === '**') {
-        result = a ** b;
-    } else {
-        result = 'unknown operation';
+    switch (operator) {
+        case '+':
+            result = a + b;
+            break;
+        case '-':
+            result = a - b;
+            break;
+        case '*':
+            result = a * b;
+            break;
+        case '/':
+            result = a / b;
+            break;
+        case '%':
+            result = a % b;
+            break;
+        case '**':
+            result = a ** b;
+            break;
+        default:
+            result = 'unknown operation';
     }
 
     return result;
